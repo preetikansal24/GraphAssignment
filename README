@@ -1,0 +1,56 @@
+##Setup
+
+Clone the project:
+
+    git clone <repo path>
+
+Setup a virtual env
+
+    virtualenv ve
+
+Start Virtual ENV
+
+    source ve/bin/activate
+
+GOTO Directory
+
+cd
+
+Install dependencies
+
+pip install -r requirements.pip
+
+##Prerequisites :
+1. npm install grunt
+2. npm install grunt-cli
+3. npm install bower
+4. bower install bootstrap
+
+```
+$ npm install
+$ bower install
+```
+
+Create a DB rpc
+
+Copy local settings
+
+cp GraphProject/settings/local_settings.py.back GraphProject/settings/local_settings.py
+
+Run Migration
+
+python manage.py migrate
+
+Start Server
+
+python manage.py runserver 8000
+
+## For hosting the html page:
+ 1. Install XAMPP server from :
+        https://www.apachefriends.org/download.html
+
+ 2. Copy the 'app' folder to applications/xampp/htdocs/
+ 3. Start the xampp server and check if Apache server is running. Configure to run on 8088
+ 4. Start the UI on localhost:8088/app/
+
+

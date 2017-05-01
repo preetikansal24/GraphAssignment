@@ -1,0 +1,39 @@
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'graphs',
+        'USER': 'root',
+        'PASSWORD': 'preeti',
+        'HOST': '',
+        'PORT': '',
+        'CONN_MAX_AGE': 60
+    },
+    'slave': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'graphs',
+        'USER': 'root',
+        'PASSWORD': 'preeti',
+        'HOST': '127.0.0.1',
+        'TEST': {
+            'MIRROR': 'default',
+        },
+        'PORT': '',
+        'CONN_MAX_AGE': 60
+    },
+    'master': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'graphs',
+        'USER': 'root',
+        'PASSWORD': 'preeti',
+        'HOST': '127.0.0.1',
+        'TEST': {
+            'MIRROR': 'default',
+        },
+        'PORT': '',
+        'CONN_MAX_AGE': 60
+    }
+}
+
+INSTANCE_NAME = "local"
+LOG_BACKUP_MAX_COUNT = 2
+LOG_MAX_BYTES = 1024 * 1024 * 50
